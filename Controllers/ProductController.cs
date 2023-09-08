@@ -44,5 +44,30 @@ namespace _WebAPIMongoDB.Controllers
             return CreatedAtAction(nameof(GetOneProduct), new { id = product.Id }, product);
         }
 
+        [HttpDelete]
+        public void DeleteItem(int id)
+        {
+            _productInterface.Delete(id);
+            
+        }
+
+        [HttpPut]
+        public ActionResult<Product> UpdateItem(int id, Product product)
+        {
+         var updateItem = _productInterface.GetById(id);
+            if(updateItem == null)
+            {
+                return NotFound();
+            }
+             Product _product = updateItem;
+            _product.Name = product.Name;
+            _product.Quantity = product.Quantity;
+            _product.Category = product.Category;
+            
+
+          _productInterface.Update(_product.Id, _product);
+            return NoContent();
+        }
+
     }
 }
