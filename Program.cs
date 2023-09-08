@@ -11,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 //builder.Services.AddScoped<IProductInterface, IProductService>();
 builder.Services.Configure<ProductStoreDBSettings>(builder.Configuration.GetSection(nameof(ProductStoreDBSettings)));
+
 builder.Services.AddSingleton<IProductSettings>(x => x.GetRequiredService<IOptions<ProductStoreDBSettings>>().Value);
 
 builder.Services.AddSingleton<IMongoClient>(x => new MongoClient(builder.Configuration.GetValue<string>
