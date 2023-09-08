@@ -24,5 +24,25 @@ namespace _WebAPIMongoDB.Controllers
             return _productInterface.GetAll();
             
         }
+        [HttpGet("id")]
+        public ActionResult<Product> GetOneProduct(int id)
+        {
+            var product = _productInterface.GetById(id);
+            if(product == null)
+            {
+                return NotFound();
+            }
+            return product;
+
+        }
+
+        [HttpPost]
+        public ActionResult<Product> CreateNew(Product product)
+        {
+            var newProduct = _productInterface.Create(product);
+
+            return CreatedAtAction(nameof(GetOneProduct), new { id = product.Id }, product);
+        }
+
     }
 }

@@ -6,28 +6,44 @@ namespace _WebAPIMongoDB.Data
 {
     public class MongoDbRepository : IProductInterface
     {
+        private readonly IMongoCollection<Product> _product;
 
-        private const string databaseName = "Product_MongoDB";
-        private const string collectionName = "products";
-
-
-        private readonly IMongoCollection<Product> productCollection;
-
-        public MongoDbRepository(IMongoClient mongoClient)
+        public MongoDbRepository(IProductSettings productSettings, IMongoClient mongoClient)
         {
-            IMongoDatabase database = mongoClient.GetDatabase(databaseName);
-            productCollection = database.GetCollection<Product>(collectionName);
+            
+            var database = mongoClient.GetDatabase(productSettings.DatabaseName);
+             _product = database.GetCollection<Product>(productSettings.ProductCollectionName);
 
         }
 
-        public void Create(Product product)
+        public Product Create(Product product)
         {
-            productCollection.InsertOne(product);
+            _product.InsertOne(product);
+            return product;
+        }
+
+        public void Delete(int id)
+        {
+            _product.DeleteOne(x => x.Id == id);
+           
         }
 
         public IEnumerable<Product> GetAll()
         {
-            throw new NotImplementedException();
+          var products =  _product.Find(product => true).ToList();
+            return products;    
+        }
+
+        public Product GetById(int id)
+        {
+            var product = _product.Find(x => x.Id == id).FirstOrDefault();
+            return product;
+        }
+
+        public void Update(int id, Product product)
+        {
+            var updateProduct = _product.ReplaceOne(x => x.Id == id, product);
+
         }
     }
 }

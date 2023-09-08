@@ -3,7 +3,7 @@ using _WebAPIMongoDB.Models;
 
 namespace _WebAPIMongoDB.Service
 {
-    public class IProductService : IProductInterface
+    public class IProductService //This is supposed to implement IProductInterface
     {
         public void Create(Product product)
         {

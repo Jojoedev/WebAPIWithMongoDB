@@ -25,3 +25,16 @@ C:\Users\HP\Desktop\CSharp projects\_WebAPIMongoDB\obj\Debug\net6.0\refint\_WebA
 C:\Users\HP\Desktop\CSharp projects\_WebAPIMongoDB\obj\Debug\net6.0\_WebAPIMongoDB.pdb
 C:\Users\HP\Desktop\CSharp projects\_WebAPIMongoDB\obj\Debug\net6.0\_WebAPIMongoDB.genruntimeconfig.cache
 C:\Users\HP\Desktop\CSharp projects\_WebAPIMongoDB\obj\Debug\net6.0\ref\_WebAPIMongoDB.dll
+C:\Users\HP\Desktop\CSharp projects\_WebAPIMongoDB\bin\Debug\net6.0\AWSSDK.Core.dll
+C:\Users\HP\Desktop\CSharp projects\_WebAPIMongoDB\bin\Debug\net6.0\AWSSDK.SecurityToken.dll
+C:\Users\HP\Desktop\CSharp projects\_WebAPIMongoDB\bin\Debug\net6.0\DnsClient.dll
+C:\Users\HP\Desktop\CSharp projects\_WebAPIMongoDB\bin\Debug\net6.0\MongoDB.Bson.dll
+C:\Users\HP\Desktop\CSharp projects\_WebAPIMongoDB\bin\Debug\net6.0\MongoDB.Driver.dll
+C:\Users\HP\Desktop\CSharp projects\_WebAPIMongoDB\bin\Debug\net6.0\MongoDB.Driver.Core.dll
+C:\Users\HP\Desktop\CSharp projects\_WebAPIMongoDB\bin\Debug\net6.0\MongoDB.Libmongocrypt.dll
+C:\Users\HP\Desktop\CSharp projects\_WebAPIMongoDB\bin\Debug\net6.0\SharpCompress.dll
+C:\Users\HP\Desktop\CSharp projects\_WebAPIMongoDB\bin\Debug\net6.0\Snappier.dll
+C:\Users\HP\Desktop\CSharp projects\_WebAPIMongoDB\bin\Debug\net6.0\ZstdSharp.dll
+C:\Users\HP\Desktop\CSharp projects\_WebAPIMongoDB\bin\Debug\net6.0\runtimes\linux\native\libmongocrypt.so
+C:\Users\HP\Desktop\CSharp projects\_WebAPIMongoDB\bin\Debug\net6.0\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\HP\Desktop\CSharp projects\_WebAPIMongoDB\bin\Debug\net6.0\runtimes\win\native\mongocrypt.dll
